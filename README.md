@@ -5,7 +5,7 @@ A web application that provides a platform that brings businesses and individual
 
 
 
-![Image of AndelaCodeCamp](https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjMhozKwuHeAhUByRoKHZS4BjAQjRx6BAgBEAU&url=https%3A%2F%2Ftwitter.com%2Fandialoice&psig=AOvVaw0pKBBNKA2N3D63qKMmNvmG&ust=1542753382449882)
+
 
 # WEEK ONE
 
