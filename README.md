@@ -1,8 +1,11 @@
 
-![Image of AndelaCodeCamp](https://simbadeveloper.github.io/support4health/navbar/image.PNG)
+![Image of AndelaCodeCamp](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYgT_qo-7cc4SWZPqLUjthdDjXDm13tHoJR50uHyvZvMRQ3RAhiQ)
 # AndelaCodeCamp
 A web application that provides a platform that brings businesses and individuals together.<br> The platform will be a catalog where business owners can register their businesses for visibility to potential customers and will also give users (customers) the ability to write reviews for the businesses.
 
+
+
+![Image of AndelaCodeCamp](https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjMhozKwuHeAhUByRoKHZS4BjAQjRx6BAgBEAU&url=https%3A%2F%2Ftwitter.com%2Fandialoice&psig=AOvVaw0pKBBNKA2N3D63qKMmNvmG&ust=1542753382449882)
 
 # WEEK ONE
 
