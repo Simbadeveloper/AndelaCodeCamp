@@ -4,11 +4,11 @@ view the v in the mvc
 """
 # views.py
 
-from flask import render_template, url_for, redirect, request
+from flask import Flask, render_template, url_for, redirect, request
+app = Flask(__name__)
+app.config["SECRET_KEY"] = 'silasomurunga'
 
-from app import app
 data = {}
-app.secret_key = "silasomurunga"
 
 #inddex route
 @app.route('/', methods=['GET'])
