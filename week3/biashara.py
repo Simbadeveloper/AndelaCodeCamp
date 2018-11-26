@@ -1,0 +1,90 @@
+from flask import Flask, jsonify, request, abort, json
+
+app = Flask(__name__)
+
+business =[
+{'id':1,
+  'company':'Andela',
+  'title':'Programmer'
+},
+{
+    'id':2,
+  'company':'Google',
+  'title':'Programmer'
+},]
+
+@app.route('/')
+def home():
+    """home function render home page"""
+    return jsonify({"message": "Welcome to Biashara Mashinani"}), 200
+
+@app.route('/business', methods=['POST'])
+def createbusiness():
+    """
+    route to create a new business
+    """
+    data = {
+        "id":request.json["id"],
+        "company":request.json["company"],
+        "title":request.json["title"]
+    }
+    business.append(data)
+    return jsonify(data),200
+
+@app.route('/business', methods=['GET'])
+def viewbusinesses():
+    """
+    route to view all business
+    """
+    return jsonify({"All business":business}), 200
+
+@app.route('/business/<int:bizid>', methods=['GET'])
+def viewonebusiness(bizid):
+    """
+    route to view one business
+    """
+    biz =[biz for biz in business if (biz['id']==bizid)]
+    return jsonify({'business':biz}),200
+
+@app.route('/business/<int:bizid>', methods=['PUT'])
+def updatebusiness(bizid):
+    """
+    route to update a particular business
+    """
+    biz = [biz for biz in business if (biz['id']==bizid)]
+
+    if 'company' in request.json:
+        biz[0]['company'] = request.json['company']
+
+    if 'title' in request.json:
+        biz[0]['title']=request.json['title']
+        return jsonify({'business':biz[0]})
+
+    return jsonify({"message":"Your business was successful updated "})
+
+
+@app.route('/business/<int:bizid>', methods=['DELETE'])
+def deletebusiness(bizid):
+    """
+    route to delete a business using its id
+    """
+    biz =[biz for biz in business if (biz['id']==bizid)]
+
+    if len(biz) == 0:
+        abort(404)
+
+    business.remove(biz[0])
+    return jsonify({'Message':'Your business was successful deleted'})
+
+@app.errorhandler(404)
+def route_not_found(error):
+    """route to handle error"""
+    return jsonify({"message":"something went wrong"})
+
+"""
+to check if the name is main so as to run the app
+run at port 5000
+
+"""
+if __name__ =="__main__":
+  app.run(debug=True, port=5000)
