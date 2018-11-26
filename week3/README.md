@@ -30,7 +30,7 @@ Create the following endpoints for your project.<br>
 Route for index page<br><br>
 
 ![image](image/createbiz.PNG)<br>
-Route for craeing a business<br><br>
+Route for creating a business<br><br>
 
 ![image](image/allbiz.PNG)<br>
 Route for viewing all business<br><br>
