@@ -32,23 +32,23 @@ def division(first, second):
 #Test the function
 class Hesabu(unittest.TestCase):
     """class that wrap the functions"""
-    def testsumm(self):
+    def test_summ(self):
         """Test for sum of numbers"""
         self.assertEqual(summ(4, 5), 9)
 
-    def testminus(self):
+    def test_minus(self):
         """Test the difference of two numbers"""
         self.assertEqual(minus(9, 5), 4)
 
-    def testmultiply(self):
+    def test_multiply(self):
         """Test the multplication of two numbers"""
         self.assertEqual(multiply(4, 5), 20)
 
-    def testmodulo(self):
+    def test_modulo(self):
         """Test the reminder after division of two numbers"""
         self.assertEqual(modulo(5, 4), 1)
 
-    def testdivision(self):
+    def test_division(self):
         """Test the division of two number"""
         self.assertEqual(division(20, 4), 5)
 

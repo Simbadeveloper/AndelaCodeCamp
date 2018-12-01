@@ -1,22 +1,28 @@
-from flask import Flask, jsonify, request, abort, json
+"""
+crud(create read update delete) for business
+"""
+from flask import Flask, jsonify, request, abort #importing libraries
 
 app = Flask(__name__)
 
-business =[
-{'id':1,
-  'company':'Andela',
-  'title':'Programmer'
+#store for business
+business = [{
+    'id':1,
+    'company':'Andela',
+    'title':'Programmer'
 },
 {
     'id':2,
-  'company':'Google',
-  'title':'Programmer'
+    'company':'Google',
+    'title':'Programmer'
 },]
 
+
+#index route
 @app.route('/')
 def home():
     """home function render home page"""
-    return jsonify({"message": "Welcome to Biashara Mashinani"}), 200
+    return jsonify({"message" : "Welcome to Biashara Mashinani"}), 200
 
 @app.route('/business', methods=['POST'])
 def createbusiness():
@@ -29,7 +35,7 @@ def createbusiness():
         "title":request.json["title"]
     }
     business.append(data)
-    return jsonify(data),200
+    return jsonify(data), 200
 
 @app.route('/business', methods=['GET'])
 def viewbusinesses():
@@ -43,21 +49,21 @@ def viewonebusiness(bizid):
     """
     route to view one business
     """
-    biz =[biz for biz in business if (biz['id']==bizid)]
-    return jsonify({'business':biz}),200
+    biz = [biz for biz in business if (biz['id'] == bizid)]
+    return jsonify({'business':biz}), 200
 
 @app.route('/business/<int:bizid>', methods=['PUT'])
 def updatebusiness(bizid):
     """
     route to update a particular business
     """
-    biz = [biz for biz in business if (biz['id']==bizid)]
+    biz = [biz for biz in business if (biz['id'] == bizid)]
 
     if 'company' in request.json:
         biz[0]['company'] = request.json['company']
 
     if 'title' in request.json:
-        biz[0]['title']=request.json['title']
+        biz[0]['title'] = request.json['title']
         return jsonify({'business':biz[0]})
 
     return jsonify({"message":"Your business was successful updated "})
@@ -68,7 +74,7 @@ def deletebusiness(bizid):
     """
     route to delete a business using its id
     """
-    biz =[biz for biz in business if (biz['id']==bizid)]
+    biz = [biz for biz in business if (biz['id'] == bizid)]
 
     if len(biz) == 0:
         abort(404)
@@ -79,12 +85,7 @@ def deletebusiness(bizid):
 @app.errorhandler(404)
 def route_not_found(error):
     """route to handle error"""
-    return jsonify({"message":"something went wrong"})
+    return error
 
-"""
-to check if the name is main so as to run the app
-run at port 5000
-
-"""
-if __name__ =="__main__":
-  app.run(debug=True, port=5000)
+if __name__ == "__main__":
+    app.run(debug=True, port=5000)
