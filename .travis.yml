@@ -4,10 +4,15 @@ python:
   - "3.6"
   - "3.6-dev"  # 3.6 development branch
   - "3.7-dev"  # 3.7 development branch
+<<<<<<< HEAD
   
+=======
+>>>>>>> 737909eac13e42e4ff4ebf48e05501e53874dcf2
 # command to install dependencies
 install:
   - pip install -r requirements.txt
 # command to run tests
 script:
   - pytest week3/test_biashara.py
+  
+  after_success:coveralls
