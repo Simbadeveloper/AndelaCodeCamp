@@ -5,7 +5,7 @@ A web application that provides a platform that brings businesses and individual
 
 
 
-
+[![Build Status](https://travis-ci.org/Simbadeveloper/AndelaCodeCamp.svg?branch=develop)](https://travis-ci.org/Simbadeveloper/AndelaCodeCamp)
 
 # WEEK ONE
 
