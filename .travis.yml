@@ -8,8 +8,10 @@ python:
 # command to install dependencies
 install:
   - pip install -r requirements.txt
+  - pip install pytest-cov
+  - pip install coveralls
 # command to run tests
 script:
-  - pytest week3/test_biashara.py
+  - pytest --cov=week3/test_biashara.py
   
   after_success:coveralls
