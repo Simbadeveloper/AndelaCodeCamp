@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MyBusiness</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://font.googleapis.com/css?
+    family=Quicksand:500" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.js">
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+        <nav>
+            <div class="logo">MyBusiness</div>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a class ='active' href="login.html">Login In</a></li>
+              <li><a href="register.html">Signup</a></li>
+            </ul>
+        </nav>
+        <section class="sec1"></section>
+        <section class="content">
+          <h1>LOGIN FORM</h1>
+          <!--Section Form-->
+          <form class = 'form' methods= "POST" action='/about.html'>
+           <label for="username">Username:</label>
+          <input type="text" id="username" name="username" placeholder="please enter you username" autofocus required/><br><br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" autofocus placeholder="please enter your email" required/><br><br>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="upassword" autofocus required placeholder="please enter your password" /><br><br>
+          <input type="submit" name="submit" value="Submit"/>
+          </form>
+          <br><br>
+        </section>
+        <section>
+          <div class='footer'>
+          <ul>
+           <li><a href="index.html">HOME</a></li>
+           <li><a href= "about.html">About</a></li>
+           <li><a href="#">Contact-us</a></li>
+        </ul>
+      <p>copyright©  2018 MyBusiness</p>
+    </div>
+      </section>
+      </div>
+      <script type="text/javascript">
+       $(window).on('scroll', function(){
+          if($(window).scrollTop()){
+             $('nav').addClass('black');
+          }
+          else{
+            $('nav').removeClass('black');
+          }
+       })
+
+      </script>
+  </body>
+</html>
