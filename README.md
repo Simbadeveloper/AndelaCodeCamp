@@ -1,4 +1,6 @@
 
+[![Build Status](https://travis-ci.org/Simbadeveloper/AndelaCodeCamp.svg?branch=develop)](https://travis-ci.org/Simbadeveloper/AndelaCodeCamp)
+
 ![Image of AndelaCodeCamp](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYgT_qo-7cc4SWZPqLUjthdDjXDm13tHoJR50uHyvZvMRQ3RAhiQ)
 # AndelaCodeCamp
 A web application that provides a platform that brings businesses and individuals together.<br> The platform will be a catalog where business owners can register their businesses for visibility to potential customers and will also give users (customers) the ability to write reviews for the businesses.
