@@ -18,9 +18,9 @@ class Pizza:
         Python only allows one __init__ method per class.
         Using class methods it’s possible to add as many alternative constructors as necessary
         
-      >>> Pizza.margherita()
-      Pizza(['mozzarella', 'tomatoes'])
+         >>> Pizza.margherita()
+         Pizza(['mozzarella', 'tomatoes'])
 
-      >>> Pizza.prosciutto()
-       Pizza(['mozzarella', 'tomatoes', 'ham'])
+         >>> Pizza.prosciutto()
+         Pizza(['mozzarella', 'tomatoes', 'ham'])
         """
