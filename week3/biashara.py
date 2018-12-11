@@ -30,7 +30,7 @@ def createbusiness():
     route to create a new business
     """
     data = {
-        "id":request.json["id"],
+        "id":len(business)",
         "company":request.json["company"],
         "title":request.json["title"]
     }
