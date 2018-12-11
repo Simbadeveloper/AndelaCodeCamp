@@ -15,6 +15,8 @@ class Pizza:
         
         """
         class methods  allow you to define alternative constructors for your classes.
+        Python only allows one __init__ method per class.
+        Using class methods it’s possible to add as many alternative constructors as necessary
         
       >>> Pizza.margherita()
       Pizza(['mozzarella', 'tomatoes'])
