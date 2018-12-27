@@ -19,13 +19,13 @@ def make_coffee(*options):
 
     if options:
         ingredients.append(', '.join(options))
+    print(len(ingredients))
 
     #Do the steps
-    print ('started making coffee...')
-    print('Getting cup')
+    print ('started making coffee...\n Getting cup')
     print('Adding {}'.format(', '.join(ingredients)))
-    print('Stir the mix 6 sec')
-    print('Finished making coffee...')
+    print('Stir the mix 6 sec\n Finished making coffee...')
+
 
     if options:
       coffee = "Tasty coffee with {}".format(', '.join(options))
