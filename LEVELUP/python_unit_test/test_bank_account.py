@@ -1,5 +1,5 @@
 import unittest
-from bank_account import BankAccount
+from bank_account import BankAccount, MinimumBalanceAccount
 
 class AccountBalanceTestCase(unittest.TestCase):
     def setUp(self):
@@ -19,3 +19,5 @@ class AccountBalanceTestCase(unittest.TestCase):
     def test_invalid_transaction(self):
         self.assertEqual(self.account_silas.withdraw(5000), 'invalid transaction', msg ='invalid transaction')
 
+    def test_sub_class(self):
+        self.assertTrue(issubclass(MinimumBalanceAccount, BankAccount), msg='Not True subclass')

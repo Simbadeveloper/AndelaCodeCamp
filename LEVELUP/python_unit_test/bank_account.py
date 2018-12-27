@@ -13,3 +13,6 @@ class BankAccount(object):
           self.balance -= amount
         else:
             return 'invalid transaction'
+class MinimumBalanceAccount(BankAccount):
+    def __init__(self, minimum = 1000):
+         self.minimum = minimum
