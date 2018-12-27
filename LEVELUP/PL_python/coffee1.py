@@ -7,15 +7,30 @@
     6. Refactor
 """
 
-def make_coffee():
-    """makes coffee"""
+def make_coffee(*options):
+    """makes coffee
+       Args:
+       options: 0 or more extra ingredients
+
+
+    """
+    #Get ingredients
     ingredients = ['coffee', 'hot water']
+
+    if options:
+        ingredients.append(', '.join(options))
+
+    #Do the steps
     print ('started making coffee...')
     print('Getting cup')
     print('Adding {}'.format(', '.join(ingredients)))
     print('Stir the mix 6 sec')
     print('Finished making coffee...')
-    coffee = 'Tasty coffee'
+
+    if options:
+      coffee = "Tasty coffee with {}".format(', '.join(options))
+    else:
+      coffee = 'Tasty coffee'
     return coffee
 
 def serve_coffee(coffee, person_name):
@@ -23,13 +38,13 @@ def serve_coffee(coffee, person_name):
     print("--Here' your {} {}. Enjoy !!!! --\n".format(coffee, person_name))
 
 #make my coffee
-my_coffee = make_coffee()
+my_coffee = make_coffee('milk','sugar')
 serve_coffee(my_coffee, 'silas')
 
 #make you coffee
-you_coffee = make_coffee()
+you_coffee = make_coffee('milk')
 serve_coffee(you_coffee, 'You')
 
 #make Gibbs coffee
-gibbs_coffee = make_coffee()
+gibbs_coffee = make_coffee('cream')
 serve_coffee(gibbs_coffee, 'Gibbs')
