@@ -1,4 +1,3 @@
-
 [![Build Status](https://travis-ci.org/Simbadeveloper/AndelaCodeCamp.svg?branch=master)](https://travis-ci.org/Simbadeveloper/AndelaCodeCamp)
 
 ![Image of AndelaCodeCamp](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYgT_qo-7cc4SWZPqLUjthdDjXDm13tHoJR50uHyvZvMRQ3RAhiQ)
